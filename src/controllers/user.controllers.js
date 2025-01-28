@@ -7,6 +7,7 @@ const createNewUser = (req, res) => {
 const loginUser = (req, res) => {
   res.send('login usuario');
 };
+
 //acttualizar al usuario
 const updateUser = (req, res) => {
   res.send('actualizar usuario');
@@ -15,4 +16,5 @@ const updateUser = (req, res) => {
 const deleteUser = (req, res) => {
   res.send('eliminar usuario');
 };
-module.exports = { createNewUser };
+
+module.exports = { createNewUser, loginUser, updateUser, deleteUser };
