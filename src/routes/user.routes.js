@@ -1,7 +1,16 @@
 const router = require('express').Router();
-const { createNewUser } = require('../controllers/user.controllers');
+const {
+  createNewUser,
+  listUsers,
+  deleteUser,
+} = require('../controllers/user.controllers');
 
 //crear ua ruta con un nuevo usuario
-router.post('/register', createNewUser);
+
+router.get('/users', listUsers);
+
+router.delete('/users', deleteUser);
+
+router.post('/users', createNewUser);
 
 module.exports = router;
